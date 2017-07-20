@@ -5,8 +5,7 @@
   "license": "MIT",
   "private": false,
   "version": "0.0.0",
-  "dependencies": {
-  },
+  "dependencies": {},
   "devDependencies": {
     "eslint": "^4.0.0"
   },
