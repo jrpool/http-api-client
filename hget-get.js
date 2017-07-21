@@ -1,6 +1,6 @@
 /*
   HTTP Client making a GET request and outputting its response. See:
-  https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_http_request_options_callback
+  https://nodejs.org/dist/latest-v8.x/docs/api/http.html#http_http_get_options_callback
 */
 
 // Import the `http` module.

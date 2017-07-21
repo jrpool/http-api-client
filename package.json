@@ -10,7 +10,7 @@
     "eslint": "^4.0.0"
   },
   "scripts": {
-    "lint": "eslint hget.js; exit 0"
+    "lint": "eslint ./*.js; exit 0"
   },
   "bugs": {
     "url": "https://github.com/jrpool/http-api-client.git/issues"

@@ -7,8 +7,7 @@
 const hgetMod = require('./hget');
 
 // Identify its objects.
-let {chunks} = hgetMod;
-let {processChunk, dataListen, responseListener, hget, arg0IfValid} = hgetMod;
+const {chunks, hget, arg0IfValid} = hgetMod;
 
 // Identify the request parameters.
 const requestParams = {
@@ -28,10 +27,10 @@ const getTemp = () => {
   // Initialize a report object.
   const reportObject = {};
   // Add the temperature to it in Kelvin, Celsius, and Fahrenheit scales.
-  reportObject['Kelvin'] = Number.parseFloat(responseObject['main']['temp']);
-  reportObject['Celsius'] = reportObject['Kelvin'] - 273.15;
-  reportObject['Fahrenheit']
-    = (9 * reportObject['Kelvin'] / 5 - 459.67).toPrecision(2);
+  reportObject['Kelvin'] = responseObject['main']['temp'];
+  const kelvinNum = Number.parseFloat(reportObject['Kelvin']);
+  reportObject['Celsius'] = (kelvinNum - 273.15).toFixed(2);
+  reportObject['Fahrenheit'] = (9 * kelvinNum / 5 - 459.67).toFixed(2);
   // Return the report object.
   return reportObject;
 };
@@ -42,7 +41,7 @@ const tempReport = () => {
   for (const scale of ['Kelvin', 'Celsius', 'Fahrenheit']) {
     console.log('Temperature in ' + scale + ': ' + temps[scale]);
   }
-}
+};
 
 /*
   Perform a GET request to the URL specified on the command line, if valid,
