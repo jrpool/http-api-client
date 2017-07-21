@@ -8,14 +8,18 @@ Node HTTP client application designed for a specific API
 ## modules
 
 ```
+hget.js
+hget-get.js
 weather.js
 ```
 
 ## Discussion
 
-This application demonstrates the use of the `get` method of Node’s `http` module in a request to an API.
+This application demonstrates the use of Node’s `http` module in a request to an API.
 
 The application fulfills the specifications of the “What’s the Weather?” module of the [Learners Guild][lg] curriculum and is part of the “HTTP Node” module in Phase 2 of the Guild’s curriculum.
+
+Two implementations are included in this directory. The one in `hget.js` uses the `http.request()` method, as specified in the curriculum. The one in `hget-get` uses the `http.get()` method instead. As packaged, the `weather.js` module imports objects from `hget.js`. To switch to the `http.get()` method, one can edit `weather.js` so that line 7 references `./hget-get` instead of `./hget`.
 
 ## Installation and Setup
 
