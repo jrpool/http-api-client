@@ -54,7 +54,7 @@ const responseListenerFn = (endCallback) => {
         See:
         https://nodejs.org/dist/latest-v8.x/docs/api/stream.html#stream_event_end
       */
-      response.once('end', endCallback;
+      response.once('end', endCallback);
     }
   };
 };
@@ -89,6 +89,6 @@ const arg0IfValid = () => {
 exports.chunks = chunks;
 exports.processChunk = processChunk;
 exports.dataListen = dataListen;
-exports.responseListener = responseListener;
+exports.responseListener = responseListenerFn;
 exports.hget = hget;
 exports.arg0IfValid = arg0IfValid;
