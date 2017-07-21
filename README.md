@@ -33,7 +33,7 @@ Make that parent directory your working directory, by executing, for example:
 
     `cd ~/Documents/projects`
 
-2. Clone this project’s repository into it, thereby creating the project directory, named `http-client`, by executing:
+2. Clone this project’s repository into it, thereby creating the project directory, named `http-api-client`, by executing:
 
     `git clone https://github.com/jrpool/http-api-client.git http-api-client`
 
